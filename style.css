@@ -1,0 +1,310 @@
+*{
+    margin: 0px;
+}
+
+/* BODY HEADER */
+
+@media only screen and (max-width: 600px) {
+    #body-header{
+        height: 65vh;  /* since default dimensions of the image container are 0px by 0px. */
+        width: 100vw;
+        background-image: url(./images/macbook_mouse.jpg);
+        opacity: 0.8;   /* To give blurry effect. */
+        background-size: cover;  /* To make image cover the entire available area. */
+        background-position: center;
+        background-attachment: fixed;  /* Parallax Effect*/
+        box-sizing: border-box;
+    }  
+}
+
+#body-header{
+    height: 65vh;  /* since default dimensions of the image container are 0px by 0px. */
+    width: 100vw;
+    background-image: url(./images/macbook_mouse.jpg);
+    opacity: 0.8;   /* To give blurry effect. */
+    background-size: cover;  /* To make image cover the entire available area. */
+    background-position: center;
+    background-attachment: fixed;  /* Parallax Effect*/
+    box-sizing: border-box;
+}
+#main-body{
+    box-sizing: border-box;
+}
+
+/* HORIZONTAL LISTS */
+
+.horizontal-list{
+    list-style: none;
+    margin: 0px; 
+    padding: 0%;
+}
+.horizontal-list li{
+    display: inline-block;
+    padding: 0px;
+    margin: 20px 20px 5px;
+    font-size: large;
+}
+.horizontal-list li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+#nav-menu li a{
+    transition: color 0.5s, border-bottom 1s;
+}
+#nav-menu li a:hover{
+    color: lightgrey;
+    border-bottom: 1px solid lightgray;
+}
+.text-center{
+    text-align: center;
+}
+
+/* NAME & SOCIAL ICONS */
+
+#name-social-container{
+    margin-top: 15vh;
+}
+#my-name{
+    font-size: 3rem ;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+    color: aliceblue;
+}
+.social-icons{
+    position: relative;
+}
+
+/* ANIMATION FOR SOCIAL ICONS */ 
+
+@keyframes blinking1 {
+    0% {
+      background-color: black;
+      border: 1px solid #666;
+    }
+    100% {
+      background-color: grey;
+      border: 1px solid #666;
+    }
+}
+@keyframes blinking2 {
+    0% {
+      background-color: black;
+      /* border: 3px solid #666; */
+      box-shadow: 0px 0px 6px 4px #666;  /*h offset(+ve value pushes towards right), v offset(+ve value pushes towards bottom), blur, spread, color*/
+    }
+    100% {
+      background-color: black;
+      /* border: 3px solid #666; */
+      box-shadow: 0px 0px 6px 4px #666;
+    }
+}
+.social{
+    animation: blinking1 1s infinite;
+    border-radius: 50%;
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+}
+.social:hover{
+    animation: blinking2 1s infinite;
+}
+
+/* ABOUT SECTION */
+
+#about{
+    height: auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+#my-image{
+    height: 15rem;
+    width: 14rem;
+    margin: auto;
+    margin-top: -18vh;
+}
+#my-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px gray;
+}
+
+#about-para{ 
+    width: 70%;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    padding: 10px;
+    text-align: justify;
+    margin: auto;
+    margin-top: 1%;
+    letter-spacing: 0.8px;
+    line-height: 28px;
+    /* color: rgb(109, 109, 109); */
+    background: linear-gradient(to right, black 0%, gray 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+#about-para #hello{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.text-highlight{
+    color: #2857a4;
+    /* font: bold; */
+    font-weight:500;
+}
+
+/* BOTTOM SECTIONS */ 
+
+section{
+    width: 100vw;
+    /* height: 75vh; */
+    height: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+main > :nth-child(even){
+    background-color: rgb(248, 248, 248);
+}
+/* main :nth-child(odd){
+    background-color: rgb(240, 240, 240);
+} */
+.section-heading{
+    padding: 20px,10px,10px;
+    /* margin: 10px auto; */
+    font-weight: 700;
+    width: auto;
+}
+.section-heading span{
+    font-size: 40;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+
+/* SKILL SECTION */
+
+.skills-display{
+    width: 70%;
+    /* height: 70vh; */
+    /* border: 2px solid #2857a4; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    /* align-items: stretch; */
+}
+
+.skill-progress{
+    height: 3rem;
+    width: 15rem;
+    /* margin: auto; */
+    margin: 1rem;
+    border-radius: 1.2rem;
+    background-color: lightgray;
+    /* box-shadow: #666; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-progress > div{     
+
+    /* It ensures that only the direct children of "skill-progress" will be affected and not the grand-children */
+
+    border-radius: 1.2rem 0rem 0rem 1.2rem;
+    display:flex;
+    align-items: center;
+}
+
+.skill-name span{
+    color: aliceblue;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+
+/*  COMMON MARGIN CLASSES */
+
+.mb75px{
+    margin-bottom: 75px;
+}
+
+/*  COMMON COLOR CLASSES */
+
+.mb-blue{
+    margin-bottom: #2857a4;
+    background-color: red;
+}
+
+/*  PERCENTAGE CLASSES */
+
+.sixty-five-per{
+    height: inherit;
+    width: 65%;
+    background-color: lightblue;
+}
+.sixty-eight-per{
+    height: inherit;
+    width: 68%;
+    background-color: lightseagreen;
+}
+.seventy-per{
+    height: inherit;
+    width: 70%;
+    background-color: orange;
+}
+.seventy-two-per{
+    height: inherit;
+    width: 72%;
+    background-color: violet;
+}
+.seventy-four-per{
+    height: inherit;
+    width: 74%;
+    background-color: brown;
+}
+.seventy-five-per{
+    height: inherit;
+    width: 75%;
+    background-color: lightgreen;
+}
+.seventy-six-per{
+    height: inherit;
+    width: 76%;
+    background-color: darkolivegreen;
+}
+.seventy-eight-per{
+    height: inherit;
+    width: 78%;
+    background-color: indigo;
+}
+.eighty-per{
+    height: inherit;
+    width: 80%;
+    background-color: lightcoral;
+}
+.eighty-two-per{
+    height: inherit;
+    width: 82%;
+    background-color: blue;
+}
+.eighty-five-per{
+    height: inherit;
+    width: 85%;
+    background-color: red;
+}
+.ninty-per{
+    height: inherit;
+    width: 90%;
+    background-color:steelblue;
+}
+
