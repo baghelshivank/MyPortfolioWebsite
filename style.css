@@ -164,6 +164,7 @@
 
 h1{
     font-size: xx-large;
+    font-weight: 700;
 }
                                                        
 section{
@@ -184,13 +185,11 @@ main > :nth-child(even){
 } */
 .section-heading{
     margin-top: 2rem;
-    padding: 20px,10px,10px;
+    padding: 20px 10px 20px 10px;
     /* margin: 10px auto; */
-    font-weight: 700;
     width: auto;
 }
 .section-heading span{
-    font-size: 40;
     color: #2857a4;
     display: inline-block;
     padding-top: 10px;
@@ -306,7 +305,7 @@ main > :nth-child(even){
     width: 85%;
     background-color: red;
 }
-.ninty-per{
+.ninety-per{
     height: inherit;
     width: 90%;
     background-color:steelblue;
@@ -381,3 +380,125 @@ main > :nth-child(even){
   }
 
   /* The .overlay class represents the overlay element that appears on top of the image when the user hovers over the portfolio item. The overlay element is initially hidden (opacity: 0) and positioned at the top of the container (transform: translateY(-100%)). When the user hovers over the portfolio item("project"), the opacity and transform properties are transitioned to create the hover effect (opacity: 1; transform: translateY(0)). */
+
+
+
+  /* CONTACT SECTION */ 
+  
+  #contact{
+    padding: 0;
+    height: 95vh;
+    width: 100vw;
+    background: linear-gradient(to right, #3976f8,#6d33f4);
+    opacity: 0.9;
+  }
+  #contact-overlay{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: aliceblue;
+  }
+  #contact-heading{
+    height: auto;
+    width: auto;
+    margin-top: 3rem;
+    padding: 20px 10px 20px 10px;
+  }
+
+  #contact-heading span{
+    color: aliceblue;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  #contact-form{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    height: auto;
+    color: aliceblue;
+  }
+  #contact-form ul{
+    padding: 0;
+  }
+  #contact-form ul li{
+    list-style: none;
+    text-align:center;
+  }
+  #contact-form ul li input, textarea{
+    width: 80%;
+    margin-bottom: 2rem;
+    background-color:transparent;
+    font-size: large;
+    color: aliceblue;
+    border: none;
+    border-bottom: 2px solid aliceblue;
+  }
+  .height2rem{
+    height: 2rem;
+  }
+  .height5rem{
+    height: 5rem;
+  }
+  #form-btn{
+    height: 3rem;
+    color: aliceblue;
+    background-color:transparent;
+    font-size: large;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 5px 5px 15px #888888;
+  }
+  #form-btn:hover{
+    background-color: rgb(5, 5, 65);
+    border: 2px solid black;
+    box-shadow: 5px 5px 15px #3e3e3e;
+
+
+  }
+
+
+  #contact-details{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 45%;
+    height: auto;
+    margin-left: 3rem;
+  }
+  #contact-details h3{
+    color: aliceblue;
+    font-weight:lighter;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #contact-details p{
+    font-family: Comic Sans MS, cursive;
+    /* font-family: Arial, sans-serif; */
+    margin-right: 2rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  #contact-details p, #my-address{
+    color: lightgray;
+  }
+  #my-address li{
+    list-style: none;
+    line-height: 2.5rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+  }
+  .contact-social{
+        border-radius: 50%;
+        margin: auto;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+    }
+    .contact-social:hover{
+        animation: blinking2 1s infinite;
+    }
+  
