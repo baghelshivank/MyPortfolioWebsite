@@ -1,5 +1,6 @@
 *{
     margin: 0px;
+    font-family: Comic Sans MS, cursive;
 }
 
 /* BODY HEADER */
@@ -376,7 +377,7 @@ main > :nth-child(even){
   }
 
   .project-link{
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   /* The .overlay class represents the overlay element that appears on top of the image when the user hovers over the portfolio item. The overlay element is initially hidden (opacity: 0) and positioned at the top of the container (transform: translateY(-100%)). When the user hovers over the portfolio item("project"), the opacity and transform properties are transitioned to create the hover effect (opacity: 1; transform: translateY(0)). */
@@ -407,6 +408,7 @@ main > :nth-child(even){
   }
 
   #contact-heading span{
+    font-family: Comic Sans MS, cursive;
     color: aliceblue;
     display: inline-block;
     margin-right: 1rem;
@@ -431,6 +433,7 @@ main > :nth-child(even){
     margin-bottom: 2rem;
     background-color:transparent;
     font-size: large;
+    font-family: Comic Sans MS, cursive;
     color: aliceblue;
     border: none;
     border-bottom: 2px solid aliceblue;
@@ -446,17 +449,16 @@ main > :nth-child(even){
     color: aliceblue;
     background-color:transparent;
     font-size: large;
+    font-family: Comic Sans MS, cursive;
     border: 2px solid aliceblue;
     border-radius: 5px;
     margin: 5px;
     box-shadow: 5px 5px 15px #888888;
   }
   #form-btn:hover{
-    background-color: rgb(5, 5, 65);
+    background-color: rgb(38, 16, 82);
     border: 2px solid black;
     box-shadow: 5px 5px 15px #3e3e3e;
-
-
   }
 
 
@@ -467,13 +469,14 @@ main > :nth-child(even){
     height: auto;
     margin-left: 3rem;
   }
-  #contact-details h3{
+  #contact-details h2{
     color: aliceblue;
     font-weight:lighter;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: Comic Sans MS, cursive;
   }
   #contact-details p{
-    font-family: Comic Sans MS, cursive;
+    /* font-family: Comic Sans MS, cursive; */
     /* font-family: Arial, sans-serif; */
     margin-right: 2rem;
     word-spacing: 0.2rem;
@@ -483,6 +486,7 @@ main > :nth-child(even){
   }
   #contact-details p, #my-address{
     color: lightgray;
+    font-family: Comic Sans MS, cursive;
   }
   #my-address li{
     list-style: none;
