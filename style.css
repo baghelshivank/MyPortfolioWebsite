@@ -383,6 +383,90 @@ main > :nth-child(even){
   /* The .overlay class represents the overlay element that appears on top of the image when the user hovers over the portfolio item. The overlay element is initially hidden (opacity: 0) and positioned at the top of the container (transform: translateY(-100%)). When the user hovers over the portfolio item("project"), the opacity and transform properties are transitioned to create the hover effect (opacity: 1; transform: translateY(0)). */
 
 
+  /* EXPERIENCE & EDUCATION SECTION */ 
+
+  .timeline{
+    position: relative;
+    /* border: 5px solid black; */
+    width: 80%;
+    height: auto;
+
+  }
+  .timeline-box{
+    position: relative;
+    /* border: 2px solid blue; */
+    width: 40%;
+    height: 25vh;
+    left: 5%;
+    margin: 5% 0;
+  }
+  .timeline-box:nth-child(even){
+    left: 55%; 
+  }
+  .timeline-box:nth-child(odd)::after{
+    content: "";
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: lightgray;
+    position: absolute;
+    top: 10%;
+    right: -14.3%;
+    z-index: 1;
+  }
+  .timeline-box:nth-child(even)::after{
+    content: "";
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: lightgray;
+    position: absolute;
+    top: 10%;
+    left: -14.3%;
+    z-index: 1;
+  }
+
+  .timeline-divider{
+    position: absolute;
+    height: 62%;
+    width: 0;
+    border: 2px dashed #0096fa6b;
+    top: 10%;
+    left: 50%;
+  }
+  .timeline-traveler{
+    position: sticky;
+    top: 40%;
+    transform:rotate(90deg);
+    z-index: 2;
+  }
+  .timeline-divider .timeline-traveler i{
+    color:#2857a4;
+  }
+
+
+  .designation, .degree-name{
+    font-size: 1.5rem;
+    color: #2857a4;
+    font-weight:bold;
+    margin-bottom: 0.7rem;
+  }
+  .organization, .institute{
+    font-size: 1.2rem;
+    color: #EE822D;
+    font-weight: lighter;
+  }
+  .timeline-box > .year, .board, .time-period{
+    color: gray;
+    font-size: 1rem;
+  }
+  .timeline-box > .year, .time-period{
+    margin-bottom: 0.7rem;
+  }
+  .designation, .degree-name, .organization, .institute, .year, .time-period, .board{
+    text-align: right;
+  }
+
 
   /* CONTACT SECTION */ 
   
