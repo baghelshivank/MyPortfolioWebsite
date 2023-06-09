@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/c47c66d326.css" crossorigin="anonymous"> -->
     <script src="https://kit.fontawesome.com/c47c66d326.js" crossorigin="anonymous"></script>
@@ -13,18 +13,19 @@
 
 <body>
     <header id="body-header">
-        <nav id="nav-menu">
-            <ul class="horizontal-list text-center">
-                <li><a href="#"> Home </a></li> <!-- "#" takes us to the top of the page-->
-                <li><a href="#about"> About </a></li>
-                <li><a href="#education"> Education </a> </li>
-                <li><a href="#experience"> Experience </a></li>
-                <li><a href="#skills"> Skills </a></li>
-                <li><a href="#portfolio"> Portfolio </a></li>
-                <li><a href="#contact"> Contact </a></li>
-            </ul>
-        </nav>
-
+        <div id="home">
+            <nav id="nav-menu">
+                <ul class="horizontal-list text-center">
+                    <li><a href="#"> Home </a></li> <!-- "#" takes us to the top of the page-->
+                    <li><a href="#about"> About </a></li>
+                    <li><a href="#education"> Education </a> </li>
+                    <li><a href="#experience"> Experience </a></li>
+                    <li><a href="#skills"> Skills </a></li>
+                    <li><a href="#portfolio"> Portfolio </a></li>
+                    <li><a href="#contact"> Contact </a></li>
+                </ul>
+            </nav>
+        </div>
         <div id="name-social-container">
             <div class="text-center">
                 <h1 id="my-name"> Shivank Singh Baghel </h1>
@@ -78,7 +79,7 @@
     <main id="main-body">
 
 
-        <section id="skills">
+        <section id="skills"> 
             <h1 class="section-heading text-center mb75px">
                 <span><i class="fa-solid fa-screwdriver-wrench"></i></span>
                 <span>SKILLS</span>
@@ -242,9 +243,6 @@
                     <p class="organization"> Coding Ninjas (Sunrise Mentors Private Limited)</p>
                     <p class="time-period"> April 2022 - March 2023</p>
                 </div>
-                <!-- <div class="timeline-box">
-
-                </div> -->
                 <div class="timeline-divider">
                     <div class="timeline-traveler">
                         <i class="fa-sharp fa-solid fa-plane fa-2x"></i>
@@ -350,6 +348,9 @@
         </section>
 
     </main>
+    <script src="./smoothScroll.js">
+
+    </script>
 </body>
 
 </html>

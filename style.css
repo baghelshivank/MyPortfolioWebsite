@@ -5,29 +5,19 @@
 
 /* BODY HEADER */
 
-@media only screen and (max-width: 600px) {
-    #body-header{
-        height: 65vh;  /* since default dimensions of the image container are 0px by 0px. */
-        width: 100vw;
-        background-image: url(./images/macbook_mouse.jpg);
-        opacity: 0.8;   /* To give blurry effect. */
-        background-size: cover;  /* To make image cover the entire available area. */
-        background-position: center;
-        background-attachment: fixed;  /* Parallax Effect*/
-        box-sizing: border-box;
-    }  
+#body-header{
+  height: 65vh;  /* since default dimensions of the image container are 0px by 0px. */
+  width: 100vw;
+  background-image: url(./images/macbook_mouse.jpg);
+  opacity: 0.8;   /* To give blurry effect. */
+  background-size: cover;  /* To make image cover the entire available area. */
+  background-position: center center ;
+  background-attachment: fixed;  /* Parallax Effect*/
+  box-sizing: border-box;
 }
 
-#body-header{
-    height: 65vh;  /* since default dimensions of the image container are 0px by 0px. */
-    width: 100vw;
-    background-image: url(./images/macbook_mouse.jpg);
-    opacity: 0.8;   /* To give blurry effect. */
-    background-size: cover;  /* To make image cover the entire available area. */
-    background-position: center;
-    background-attachment: fixed;  /* Parallax Effect*/
-    box-sizing: border-box;
-}
+
+
 #main-body{
     box-sizing: border-box;
 }
@@ -63,7 +53,7 @@
 /* NAME & SOCIAL ICONS */
 
 #name-social-container{
-    margin-top: 15vh;
+    margin-top: 12vh;
 }
 #my-name{
     font-size: 4rem ;
@@ -74,6 +64,8 @@
 }
 .social-icons{
     position: relative;
+    margin-bottom: 2rem;
+
 }
 
 /* ANIMATION FOR SOCIAL ICONS */ 
@@ -122,10 +114,12 @@
     margin-right: 0.5rem;
 }
 #my-image{
-    height: 15rem;
-    width: 14rem;
+    /* height: 15rem; */
+    /* width: 14rem; */
+    height: 34vh;
+    width: 32vh;
     margin: auto;
-    margin-top: -18vh;
+    margin-top: -17vh;
 }
 #my-image img{
     height: 100%;
@@ -160,6 +154,7 @@
     /* font: bold; */
     font-weight:500;
 }
+
 
 /* BOTTOM SECTIONS */ 
 
@@ -245,9 +240,9 @@ main > :nth-child(even){
 
 /*  COMMON COLOR CLASSES */
 
-.mb-blue{
+/* .mb-blue{
     margin-bottom: #2857a4;
-}
+} */
 
 /*  PERCENTAGE CLASSES */
 
@@ -377,7 +372,7 @@ main > :nth-child(even){
   }
 
   .project-link{
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   /* The .overlay class represents the overlay element that appears on top of the image when the user hovers over the portfolio item. The overlay element is initially hidden (opacity: 0) and positioned at the top of the container (transform: translateY(-100%)). When the user hovers over the portfolio item("project"), the opacity and transform properties are transitioned to create the hover effect (opacity: 1; transform: translateY(0)). */
@@ -411,10 +406,10 @@ main > :nth-child(even){
     background-color: lightgray;
     position: absolute;
     top: 10%;
-    right: -14.3%;
+    right: -14.5%;
     z-index: 1;
   }
-  .timeline-box:nth-child(even)::after{
+  .timeline-box:nth-child(even)::before{
     content: "";
     border-radius: 50%;
     width: 1rem;
@@ -434,6 +429,7 @@ main > :nth-child(even){
     top: 10%;
     left: 50%;
   }
+  
   .timeline-traveler{
     position: sticky;
     top: 40%;
@@ -443,7 +439,6 @@ main > :nth-child(even){
   .timeline-divider .timeline-traveler i{
     color:#2857a4;
   }
-
 
   .designation, .degree-name{
     font-size: 1.5rem;
@@ -472,7 +467,7 @@ main > :nth-child(even){
   
   #contact{
     padding: 0;
-    height: 95vh;
+    height: auto;
     width: 100vw;
     background: linear-gradient(to right, #3976f8,#6d33f4);
     opacity: 0.9;
@@ -551,18 +546,14 @@ main > :nth-child(even){
     box-sizing: border-box;
     width: 45%;
     height: auto;
-    margin-left: 3rem;
+    padding: 2rem;
   }
   #contact-details h2{
     color: aliceblue;
     font-weight:lighter;
-    /* font-family: 'Times New Roman', Times, serif; */
     font-family: Comic Sans MS, cursive;
   }
   #contact-details p{
-    /* font-family: Comic Sans MS, cursive; */
-    /* font-family: Arial, sans-serif; */
-    margin-right: 2rem;
     word-spacing: 0.2rem;
     letter-spacing: 0.1rem;
     font-size: 1.2rem;
@@ -580,13 +571,116 @@ main > :nth-child(even){
     font-size: 1.2rem;
   }
   .contact-social{
-        border-radius: 50%;
-        margin: auto;
-        height: 40px;
-        line-height: 40px;
-        width: 40px;
+    border-radius: 50%;
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+  }
+  .contact-social:hover{
+    animation: blinking2 1s infinite;
+  }
+
+
+
+    /*  MEDIA QUERIES  */ 
+
+
+  @media only screen and (max-width: 950px) {
+    html{
+      font-size: 14px;
     }
-    .contact-social:hover{
-        animation: blinking2 1s infinite;
+    #body-header{
+      height: 40vh;  
+    } 
+    #name-social-container{
+      margin-top: 8vh;
     }
+    #my-image{
+      height: 20vh;
+      width: 18vh;
+      margin: auto;
+      margin-top: -10vh;
+    }
+    .project{
+      height: 16.2rem;
+      width: 28.8rem;
+      background-size: cover;
+      margin-bottom: 4rem;
+
+      /* height: 13.5rem;
+      width: 24rem; */
+    }
+    .timeline-divider{
+      height: 64%;
+      top: 7%;
+      left: 5%;
+    } 
+    /* .timeline-box{
+      left: 12%;
+      width: 80%;
+    }
+    .timeline-box:nth-child(even){
+      left: 12%;
+    } */
+    .timeline-box{
+      left: 12% !important; /* assigns higher priority to it over any other conflicting CSS rule*/
+      width: 80%;
+    }
+    .timeline-box:nth-child(odd)::after{
+      left: -10%;
+    }
+    .timeline-box:nth-child(even)::before{
+      left: -10%;
+    }
+    #contact-form{
+      width: 100%;
+      margin-bottom: 7rem;
+    }
+    #contact-details{
+      width: 100%;
+    }
+  }
+
+@media only screen and (max-width: 572px) {
+  html{
+    font-size: 14px;
+  }
+  #body-header{
+    height: 30vh;
+  }
+  .social:active, .social:focus{
+    animation: blinking2 1s infinite;
+  }
+  #my-image{
+    height: 10rem;
+    width: 9rem;
+    margin: auto;
+    margin-top: -9vh;
+  }
+  .timeline-divider{
+    height: 64%;
+    top: 7%;
+    left: 5%;
+  } 
+  .timeline-box{
+    left: 12% !important; /* assigns higher priority to it over any other conflicting CSS rule*/
+    width: 80%;
+  }
+  .timeline-box:nth-child(odd)::after{
+    left: -10%;
+  }
+  .timeline-box:nth-child(even)::before{
+    left: -10%;
+  }
+  #contact-form{
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+  #contact-details{
+    width: 100%; 
+  }
+}
+
+
   
