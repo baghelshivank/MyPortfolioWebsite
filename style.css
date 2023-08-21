@@ -43,13 +43,13 @@ body{
 
 .horizontal-list{
     list-style: none;
-    margin: 0px; 
+    margin: 0; 
     padding: 0%;
 }
 .horizontal-list li{
     display: inline-block;
     padding: 0px;
-    margin: 20px 20px 5px;
+    margin: 1.25rem 1.25rem 0.33rem;
     /* font-size: large; */
 }
 .horizontal-list li a{
@@ -57,7 +57,7 @@ body{
     text-decoration: none;
 }
 #nav-menu{
-  font-size: 25px;
+  font-size: 1.66rem;
 }
 #nav-menu li a{
     transition: color 0.5s, border-bottom 1s;
@@ -104,21 +104,21 @@ body{
     0% {
       background-color: black;
       /* border: 3px solid #666; */
-      box-shadow: 0px 0px 6px 4px #666;  /*h offset(+ve value pushes towards right), v offset(+ve value pushes towards bottom), blur, spread, color*/
+      box-shadow: 0 0 0.4rem 0.25rem #666;  /*h offset(+ve value pushes towards right), v offset(+ve value pushes towards bottom), blur, spread, color*/
     }
     100% {
       background-color: black;
       /* border: 3px solid #666; */
-      box-shadow: 0px 0px 6px 4px #666;
+      box-shadow: 0 0 0.4rem 0.25rem #666;
     }
 }
 .social{
     animation: blinking1 1s infinite;
     border-radius: 50%;
     margin: auto;
-    height: 40px;
-    line-height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
 }
 .social:hover{
     animation: blinking2 1s infinite;
@@ -144,19 +144,19 @@ body{
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0px 0px 5px 1px gray;
+    box-shadow: 0 0 0.33rem 1px gray;
 }
 
 #about-para{ 
     width: 70%;
     font-family: sans-serif;
     font-size: 1.1rem;
-    padding: 10px;
+    padding: 0.6rem;
     text-align: justify;
     margin: auto;
     margin-top: 1%;
     letter-spacing: 0.8px;
-    line-height: 28px;
+    line-height: 1.75rem;
     /* color: rgb(109, 109, 109); */
     /* background: linear-gradient(to right, black 0%, lightslategray 100%); */
     background: linear-gradient(to right, white 0%, white 100%);
@@ -168,11 +168,11 @@ body{
 
 #hello{
   font-size: 1.5rem;
-  margin-left:200px;
-  margin-bottom: 10px;
+  margin-left:12.5rem;
+  margin-bottom: 0.6rem;
   display: inline-block;
   text-overflow: clip;
-  padding: 10px;
+  padding: 0.6rem;
   width: 30%;
 }
 #hello h3{
@@ -221,7 +221,7 @@ section{
     width: 100vw;
     /* height: 75vh; */    
     height: auto;
-    padding: 40px;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;  
     align-items: center;
@@ -235,7 +235,7 @@ main > :nth-child(even){
 } */
 .section-heading{
     margin-top: 2rem;
-    padding: 20px 10px 20px 10px;
+    padding: 1.25rem 0.6rem 1.25rem 0.6rem;
     /* margin: 10px auto; */
     width: auto;
 }
@@ -243,7 +243,7 @@ main > :nth-child(even){
     /* color: #2857a4; */
     color: #4c0fae;
     display: inline-block;
-    padding-top: 10px;
+    padding-top: 0.6rem;
     margin-right: 0.5rem;
 }
 
@@ -268,7 +268,7 @@ main > :nth-child(even){
     border-radius: 1.2rem;
     background-color: lightgray;
     /* box-shadow: #666; */
-    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.36rem 0.36rem 0.33rem rgba(0, 0, 0, 0.1);
 }
 
 .skill-progress > div{     
@@ -283,14 +283,14 @@ main > :nth-child(even){
 .skill-name span{
     color: aliceblue;
     font-size: 1.3rem;
-    margin-left: 10px;
+    margin-left: 0.6rem;
 }
 
 
 /*  COMMON MARGIN CLASSES */
 
 .mb75px{
-    margin-bottom: 75px;
+    margin-bottom: 4.7rem;
 }
 
 /*  COMMON COLOR CLASSES */
@@ -383,7 +383,7 @@ main > :nth-child(even){
     width: 24rem;
     /* border: 1px solid #666; */
     border-radius: 0rem 0rem 3rem 3rem;
-    margin: 10px;
+    margin: 0.6rem;
     position: relative;
     overflow: hidden;
 }
@@ -391,21 +391,21 @@ main > :nth-child(even){
 .project:hover .overlay {
     opacity: 1;
     transform: translateY(0);
-    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.36rem 0.36rem 0.33rem rgba(0, 0, 0, 0.1);
 
   }
 .overlay {
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: rgba(50, 50, 50, 0.6);
     color: aliceblue;
     opacity: 0;
     transition: opacity 0.5s  , transform 0.5s;
     transform: translateY(-100%);
-    padding: 20px;
+    padding: 1.25rem;
   }
   
   .overlay h2 {
@@ -538,7 +538,7 @@ main > :nth-child(even){
     height: auto;
     width: auto;
     margin-top: 3rem;
-    padding: 20px 10px 20px 10px;
+    padding: 1.25rem 0.62rem 1.25rem 0.62rem;
   }
 
   #contact-heading span{
@@ -585,9 +585,9 @@ main > :nth-child(even){
     font-size: large;
     font-family: Comic Sans MS, cursive;
     border: 2px solid aliceblue;
-    border-radius: 5px;
-    margin: 5px;
-    box-shadow: 5px 5px 15px #888888;
+    border-radius: 0.33rem;
+    margin: 0.33rem;
+    box-shadow: 0.33rem 0.33rem 1rem #888888;
   }
   #form-btn:hover{
     background-color: black;
@@ -629,9 +629,9 @@ main > :nth-child(even){
     animation: blinking1 1s infinite;
     border-radius: 50%;
     margin: auto;
-    height: 40px;
-    line-height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
   }
   .contact-social:hover{
     animation: blinking2 1s infinite;
@@ -644,13 +644,13 @@ main > :nth-child(even){
 
   @media only screen and (max-width: 950px) {
     html{
-      font-size: 20px;
+      font-size: 1.25rem;
     }
     #body-header{
       height: 40vh;  
     } 
     #nav-menu{
-      font-size: 20px;
+      font-size: 1.25rem;
     }
     #name-social-container{
       margin-top: 8vh;
@@ -708,7 +708,7 @@ main > :nth-child(even){
 
 @media only screen and (max-width: 572px) {
   html{
-    font-size: 14px;
+    font-size: 0.5rem;
   }
   #body-header{
     height: 30vh;
