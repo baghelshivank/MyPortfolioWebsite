@@ -2,18 +2,35 @@
     margin: 0px;
     font-family: Comic Sans MS, cursive;
 }
+body{
+  background-color: lightslategray;
+}
 
 /* BODY HEADER */
 
 #body-header{
   height: 65vh;  /* since default dimensions of the image container are 0px by 0px. */
   width: 100vw;
-  background-image: url(./images/macbook_mouse.jpg);
+  background-image: url(./images/bg-unsplash.jpg);
+  /* filter: blur(1px); */
   opacity: 0.8;   /* To give blurry effect. */
-  background-size: cover;  /* To make image cover the entire available area. */
+  background-size: contain;  /* To make image cover the entire available area. */
   background-position: center center ;
   background-attachment: fixed;  /* Parallax Effect*/
   box-sizing: border-box;
+}
+#body-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65vh;
+  background: transparent; /* Optional background color */
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(5px); /* Adjust the blur value as needed */
+  pointer-events: none; /* Allow interactions with underlying elements */
+  z-index: -1; /* Place the overlay behind the children elements */
 }
 
 
@@ -33,11 +50,14 @@
     display: inline-block;
     padding: 0px;
     margin: 20px 20px 5px;
-    font-size: large;
+    /* font-size: large; */
 }
 .horizontal-list li a{
     color: aliceblue;
     text-decoration: none;
+}
+#nav-menu{
+  font-size: 25px;
 }
 #nav-menu li a{
     transition: color 0.5s, border-bottom 1s;
@@ -76,8 +96,8 @@
       border: 1px solid #666;
     }
     100% {
-      background-color: grey;
-      border: 1px solid #666;
+      /* background-color: grey; */
+      border: 1px solid black;
     }
 }
 @keyframes blinking2 {
@@ -110,8 +130,7 @@
     height: auto;
     width: 100%;
     position: relative;
-    text-align: center;
-    margin-right: 0.5rem;
+    /* text-align: center; */
 }
 #my-image{
     /* height: 15rem; */
@@ -139,16 +158,51 @@
     letter-spacing: 0.8px;
     line-height: 28px;
     /* color: rgb(109, 109, 109); */
-    background: linear-gradient(to right, black 0%, gray 100%);
+    /* background: linear-gradient(to right, black 0%, lightslategray 100%); */
+    background: linear-gradient(to right, white 0%, white 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
-#about-para #hello{
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+
+#hello{
+  font-size: 1.5rem;
+  margin-left:200px;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-overflow: clip;
+  padding: 10px;
+  width: 30%;
 }
+#hello h3{
+  color: white;
+  text-align: left !important;
+
+  background-color: lightslategray;
+  overflow:hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  text-align: justify;
+  animation: 
+          typing 5s steps(40, end) infinite,
+          blink 0.7s step-end infinite;
+  
+}
+      /* The typing effect */
+      @keyframes typing {
+        0% { width: 0 }
+        50% { width: 100% }
+        100% { width: 0% }
+
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: white; }
+      }
+
 .text-highlight{
     color: #2857a4;
     /* font: bold; */
@@ -186,7 +240,8 @@ main > :nth-child(even){
     width: auto;
 }
 .section-heading span{
-    color: #2857a4;
+    /* color: #2857a4; */
+    color: #4c0fae;
     display: inline-block;
     padding-top: 10px;
     margin-right: 0.5rem;
@@ -195,7 +250,7 @@ main > :nth-child(even){
 /* SKILL SECTION */
 
 .skills-display{
-    width: 70%;
+    width: 90%;
     /* height: 70vh; */
     /* border: 2px solid #2857a4; */
     display: flex;
@@ -448,11 +503,11 @@ main > :nth-child(even){
   }
   .organization, .institute{
     font-size: 1.2rem;
-    color: #EE822D;
+    color: black;
     font-weight: lighter;
   }
   .timeline-box > .year, .board, .time-period{
-    color: gray;
+    color: rgba(0, 0, 0, 0.600);
     font-size: 1rem;
   }
   .timeline-box > .year, .time-period{
@@ -535,9 +590,9 @@ main > :nth-child(even){
     box-shadow: 5px 5px 15px #888888;
   }
   #form-btn:hover{
-    background-color: rgb(38, 16, 82);
+    background-color: black;
     border: 2px solid black;
-    box-shadow: 5px 5px 15px #3e3e3e;
+    /* box-shadow: 5px 5px 15px #3e3e3e; */
   }
 
 
@@ -571,6 +626,7 @@ main > :nth-child(even){
     font-size: 1.2rem;
   }
   .contact-social{
+    animation: blinking1 1s infinite;
     border-radius: 50%;
     margin: auto;
     height: 40px;
@@ -588,13 +644,21 @@ main > :nth-child(even){
 
   @media only screen and (max-width: 950px) {
     html{
-      font-size: 14px;
+      font-size: 20px;
     }
     #body-header{
       height: 40vh;  
     } 
+    #nav-menu{
+      font-size: 20px;
+    }
     #name-social-container{
       margin-top: 8vh;
+    }
+    #my-name{
+      font-size: 3rem;
+      margin-bottom: 2rem;
+
     }
     #my-image{
       height: 20vh;
