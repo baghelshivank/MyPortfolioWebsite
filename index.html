@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/c47c66d326.css" crossorigin="anonymous"> -->
     <script src="https://kit.fontawesome.com/c47c66d326.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="./images/briefcase.png">
     <title> Shivank Singh Baghel </title>
 </head>
 
@@ -271,7 +272,7 @@
         <section id="experience">
             <h1 class="section-heading text-center mb75px">
                 <span><i class="fa-solid fa-laptop-code"></i></span>
-                <span>PROFESSIONAL EXPERIENCE</span>
+                <span>EXPERIENCE</span>
             </h1>
             <div class="timeline">
                 <div class="timeline-box">
@@ -352,35 +353,39 @@
                         <span>CONTACT</span>
                     </h1>
                 </div>
-                <div id="contact-form">
-                    <ul>
-                        <li>
-                            <input class="height2rem" name="Name" type="text" placeholder="Your Name">
-                        </li>
-                        <li>
-                            <input class="height2rem" name="Email" type="text" placeholder="Your Email">
-                        </li>
-                        <li>
-                            <textarea class="height5rem" name="Message" placeholder="Enter your message here..."></textarea>
-                        </li>
-                        <li>
-                            <button id="form-btn" type="submit">Send Message</button>
-                        </li>
-                    </ul>
+                <div id="contact-card">
+                    <div id="contact-form">
+                        <form autocomplete="off">
+                            <ul>
+                                <li>
+                                    <input class="height2rem" id="form-name" name="Name" type="text" placeholder="Your Name">
+                                </li>
+                                <li>
+                                    <input class="height2rem" id="form-email" name="Email" type="text" placeholder="Your Email">
+                                </li>
+                                <li>
+                                    <textarea class="height5rem" id="form-msg" name="Message" placeholder="Enter your message here..."></textarea>
+                                </li>
+                                <li>
+                                    <button id="form-btn" type="submit" onclick="sendToWhatsapp()">Send Message</button>
+                                </li>
+                            </ul>
+                        </form>
 
-                </div>
-                <div id="contact-details">
-                    <h2> Get in touch</h2>
-                    <br/>
-                    <p> Thank you for visiting my portfolio! If you have any questions, project proposals, or simply want to connect, I'd love to hear from you. Feel free to reach out using any of the following methods : </p>
-                    <br/>
-                    <br/>
-                    <ul id="my-address">
-                        <li><i class="fa-solid fa-location-dot"></i> Indore, India</li>
-                        <li><i class="fa-solid fa-phone"></i> +91 7987388402</li>
-                        <li><i class="fa-solid fa-envelope"></i>  baghelshivank97@gmail.com</li>
-                    </ul>
-                    <br/>
+                    </div>
+                    <div id="contact-details">
+                        <h2> Get in touch</h2>
+                        <br/>
+                        <p> Thank you for visiting my portfolio! If you have any questions, project proposals, or simply want to connect, I'd love to hear from you. Feel free to reach out using any of the following methods : </p>
+                        <br/>
+                        <br/>
+                        <ul id="my-address">
+                            <li><i class="fa-solid fa-location-dot"></i> Indore, India</li>
+                            <li><i class="fa-solid fa-phone"></i> +91 7987388402</li>
+                            <li><i class="fa-solid fa-envelope"></i>  baghelshivank97@gmail.com</li>
+                        </ul>
+                        <br/>
+                    </div>
                 </div>
                 
                 <div class="social-icons text-center">
@@ -401,6 +406,9 @@
 
     </main>
     <script src="./smoothScroll.js">
+
+    </script>
+    <script src="./sendToWhatsapp.js">
 
     </script>
 </body>
