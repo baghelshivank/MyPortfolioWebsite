@@ -67,24 +67,24 @@ body{
 }
 #nav-menu-wrap #toggler{
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: 1rem;
+  left: 1rem;
   z-index: 2;
   cursor: pointer;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   opacity: 0;
 }
 #nav-menu-wrap #hamburger{
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: 1rem;
+  left: 1rem;
   z-index: 1;
-  height: 2.5rem;
-  width: 2.5rem;
-  border: 0.5px solid white;
-  border-radius: 10px;
-  padding: 0.75rem;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1rem;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -138,10 +138,10 @@ body{
 #nav-menu{
   font-size: 1.66rem;
 }
-#nav-menu li a{
+#nav-menu ul li a{
     transition: color 0.5s, border-bottom 1s;
 }
-#nav-menu li a:hover{
+#nav-menu ul li a:hover{
     color: lightgrey;
     border-bottom: 1px solid lightgray;
 }
@@ -165,7 +165,6 @@ body{
 .social-icons{
     position: relative;
     margin-bottom: 2rem;
-
 }
 
 /* ANIMATION FOR SOCIAL ICONS */ 
@@ -603,6 +602,7 @@ main > :nth-child(even){
   
   #contact{
     padding: 0;
+    min-height: 100vh;
     height: auto;
     width: 100vw;
     background: linear-gradient(to right, #3976f8,#6d33f4);
@@ -610,7 +610,7 @@ main > :nth-child(even){
   }
   #contact-overlay{
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.55);
     color: aliceblue;
@@ -633,7 +633,8 @@ main > :nth-child(even){
     display: flex;
   }
   #contact-form{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 50%;
     height: auto;
@@ -675,7 +676,7 @@ main > :nth-child(even){
     box-shadow: 0.33rem 0.33rem 1rem #888888;
   }
   #form-btn:hover{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.3);
     border: 2px solid black;
     /* box-shadow: 5px 5px 15px #3e3e3e; */
   }
@@ -787,10 +788,16 @@ main > :nth-child(even){
     }
     #contact-form{
       width: 100%;
-      margin-bottom: 7rem;
+      min-height: 40vh;
+      margin-bottom: 5rem;
+      padding: 2rem;
     }
+  #contact-form ul li input, textarea{
+    margin-bottom: 3rem;
+  }
     #contact-details{
       width: 100%;
+      min-height: 40vh;
     }
   }
 
@@ -801,14 +808,57 @@ main > :nth-child(even){
   #body-header{
     height: 30vh;
   }
+  #body-header::before {
+    height: 30vh;
+  }
+  #nav-menu{
+    font-size: 1.66rem;
+    display: none;
+  }
+  #nav-menu ul li a{
+      transition: color 0.5s, border-bottom 1s;
+  }
+  #nav-menu ul li a:hover{
+      color: lightgrey;
+      border-bottom: 1px solid lightgray;
+  }
   .social:active, .social:focus{
     animation: blinking2 1s infinite;
   }
+  #name-social-container{
+    margin-top: 0;
+    height: 22vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #my-name{
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+  }
+  .social-icons .social{
+      height: 3rem;
+      width: 3rem;
+      line-height: 3rem;
+  }
+  .social-icons .social a i{
+    margin-top: 1.6rem;
+    font-size: 1.5rem;
+  }
   #my-image{
-    height: 10rem;
-    width: 9rem;
+    height: 15rem;
+    width: 13.5rem;
     margin: auto;
-    margin-top: -9vh;
+    margin-top: -7.5rem;
+  }
+  #hello{
+  width: 50%;
+  }
+  #about-para p{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight:500;
   }
   .timeline-divider{
     height: 64%;
@@ -830,10 +880,43 @@ main > :nth-child(even){
   }
   #contact-form{
     width: 100%;
+    min-height: 40%;
     margin-bottom: 7rem;
+    padding: 2rem;
+  }
+  #contact-form ul li input, textarea{
+    margin-bottom: 6rem;
+  }
+  #form-btn{
+    font-size: 2rem;
+    height: 5rem;
+    width: 20rem;
   }
   #contact-details{
+    min-height: 40%;
     width: 100%; 
+  }
+  #contact-details h2{
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    word-spacing: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  #contact-details p,  #my-address li{
+    word-spacing: 0.45rem;
+    letter-spacing: 0.3rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  .contact-social{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+  }
+  .contact-social a i{
+    margin-top: 2rem;
+    font-size: 2rem;
   }
 }
 
