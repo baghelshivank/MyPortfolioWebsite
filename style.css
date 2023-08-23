@@ -3,7 +3,10 @@
     /* font-family: Comic Sans MS, cursive; */
 }
 body{
+  box-sizing: border-box;
   background-color: lightslategray;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* BODY HEADER */
@@ -49,13 +52,89 @@ body{
 .horizontal-list li{
     display: inline-block;
     padding: 0px;
-    margin: 1.25rem 1.25rem 0.33rem;
+    margin: 1rem 1.25rem 0.33rem;
     /* font-size: large; */
 }
 .horizontal-list li a{
     color: aliceblue;
     text-decoration: none;
 }
+
+/*  CODE FOR HAMBURGER ICON */
+
+#nav-menu-wrap{
+  position: relative;
+}
+#nav-menu-wrap #toggler{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0;
+}
+#nav-menu-wrap #hamburger{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 0.5px solid white;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav-menu-wrap #hamburger > div{
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+#nav-menu-wrap #hamburger > div::before,
+#nav-menu-wrap #hamburger > div::after{
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav-menu-wrap #hamburger > div::after{
+  top: 10px;
+}
+
+/* Animation for the hamburger icon */
+
+#nav-menu-wrap #toggler:checked + #hamburger{
+  box-shadow: 4px 4px 4px #fff;
+}
+#nav-menu-wrap #toggler:checked + #hamburger>div{
+  transform: rotate(135deg);
+}
+#nav-menu-wrap #toggler:checked + #hamburger>div::before,
+#nav-menu-wrap #toggler:checked + #hamburger>div::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#nav-menu-wrap #toggler:checked:hover + #hamburger>div{
+  transform: rotate(225deg);
+}
+
+/* CODE FOR NAVIGATION MENU */
+
 #nav-menu{
   font-size: 1.66rem;
 }
@@ -66,6 +145,7 @@ body{
     color: lightgrey;
     border-bottom: 1px solid lightgray;
 }
+
 .text-center{
     text-align: center;
 }
@@ -73,7 +153,7 @@ body{
 /* NAME & SOCIAL ICONS */
 
 #name-social-container{
-    margin-top: 12vh;
+    margin-top: 8vh;
 }
 #my-name{
     font-size: 4rem ;
