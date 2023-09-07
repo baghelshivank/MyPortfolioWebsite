@@ -511,6 +511,12 @@ main > :nth-child(even){
   .project-link{
     margin-top: 1rem;
   }
+  .project-link a{
+    color: #fff;
+  }
+  .project-link a:hover{
+    color: yellow;
+  }
 
   /* The .overlay class represents the overlay element that appears on top of the image when the user hovers over the portfolio item. The overlay element is initially hidden (opacity: 0) and positioned at the top of the container (transform: translateY(-100%)). When the user hovers over the portfolio item("project"), the opacity and transform properties are transitioned to create the hover effect (opacity: 1; transform: translateY(0)). */
 
