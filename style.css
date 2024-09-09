@@ -381,67 +381,102 @@ main > :nth-child(even){
     margin-bottom: #2857a4;
 } */
 
+.bg-lightseagreen{
+  background-color: lightseagreen;
+}
+.bg-darkolivegreen{
+  background-color: darkolivegreen;
+}
+.bg-brown{
+  background-color: brown;
+}
+.bg-steelblue{
+  background-color:steelblue;
+}
+.bg-orange{
+  background-color: rgb(255, 132, 0);
+}
+.bg-violet{
+  background-color: violet;
+}
+.bg-red{
+  background-color: red;
+}
+.bg-skyblue{
+  background-color: skyblue;
+}
+.bg-dark-skyblue{
+  background-color: rgb(0, 110, 255);
+}
+.bg-yellow-js{
+  background-color: yellow;
+  span{
+    color: black;
+  }
+}
+.bg-blue{
+  background-color: blue;
+}
+.bg-lightgreen{
+  background-color: lightgreen;
+}
+.bg-indigo{
+  background-color: indigo;
+}
+.bg-lightcoral{
+  background-color: lightcoral;
+}
+
 /*  PERCENTAGE CLASSES */
 
 .sixty-five-per{
-    height: inherit;
-    width: 65%;
-    background-color: lightblue;
+  height: inherit;
+  width: 65%;
+  background-color: lightblue;
 }
 .sixty-eight-per{
-    height: inherit;
-    width: 68%;
-    background-color: lightseagreen;
+  height: inherit;
+  width: 68%;
 }
 .seventy-per{
     height: inherit;
     width: 70%;
-    background-color: orange;
 }
 .seventy-two-per{
     height: inherit;
     width: 72%;
-    background-color: violet;
 }
 .seventy-four-per{
     height: inherit;
     width: 74%;
-    background-color: brown;
 }
 .seventy-five-per{
     height: inherit;
     width: 75%;
-    background-color: lightgreen;
 }
 .seventy-six-per{
     height: inherit;
     width: 76%;
-    background-color: darkolivegreen;
 }
 .seventy-eight-per{
     height: inherit;
     width: 78%;
-    background-color: indigo;
 }
 .eighty-per{
     height: inherit;
     width: 80%;
-    background-color: lightcoral;
 }
 .eighty-two-per{
     height: inherit;
     width: 82%;
-    background-color: blue;
 }
 .eighty-five-per{
     height: inherit;
     width: 85%;
-    background-color: red;
 }
 .ninety-per{
     height: inherit;
     width: 90%;
-    background-color:steelblue;
 }
 
 
